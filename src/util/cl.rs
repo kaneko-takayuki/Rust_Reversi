@@ -1,7 +1,7 @@
 ///
 /// 盤面を表示する
 ///
-pub fn display_board(black: &u64, white: &u64) {
+pub fn display_board(black: &u64, white: &u64, put_board: &u64) {
     println!(" |A|B|C|D|E|F|G|H|");
     println!("- - - - - - - - - ");
 
@@ -13,6 +13,7 @@ pub fn display_board(black: &u64, white: &u64) {
                 let pos = 1 << (i * 8 + j);
                 if black & pos != 0 {return 'o';}
                 if white & pos != 0 {return 'x';}
+                if put_board & pos != 0 {return '#'}
                 return ' '
             })
             .collect();
