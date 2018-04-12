@@ -1,0 +1,6 @@
+[package]
+name = "reversi"
+version = "0.1.0"
+authors = ["kaneko_takayuki <g.knk.9410@gmail.com>"]
+
+[dependencies]
