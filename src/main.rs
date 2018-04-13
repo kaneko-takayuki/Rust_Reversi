@@ -1,10 +1,7 @@
 extern crate reversi;
 
-use reversi::reversi::core;
-use reversi::util::cl;
+use reversi::util::game;
 
 fn main() {
-    let (black, white) = core::init_board();
-    let put_board: u64 = core::get_put_board(&black, &white);
-    cl::display_board(&black, &white, &put_board);
+    game::game_start();
 }
